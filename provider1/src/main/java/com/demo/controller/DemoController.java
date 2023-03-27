@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class DemoController {
-    @Value("${server.port}")
+    @Value("${test}")
     String port;
+
+    
 
     @GetMapping("getInfo")
     public String getInfo(@RequestParam(value = "name",defaultValue = "nacosConfig",required = false)String name){
